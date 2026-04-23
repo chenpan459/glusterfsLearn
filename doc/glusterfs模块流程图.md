@@ -2,7 +2,7 @@
 
 本文用 **Mermaid** 描述 `glusterfs-10.5` 各主要模块的**典型控制流**与**数据流**，便于在支持 Mermaid 的 Markdown 预览中查看。流程为逻辑归纳，与具体补丁版本可能略有差异。
 
-**相关文档：** [`glusterfs模块详解与实现原理.md`](./glusterfs模块详解与实现原理.md) · [`glusterfs代码层次架构.md`](./glusterfs代码层次架构.md) · [`glusterfs架构概览.md`](./glusterfs架构概览.md)
+**相关文档：** [`glusterfs模块详解与实现原理.md`](./glusterfs模块详解与实现原理.md) · [`glusterfs副本与纠删码实现分析.md`](./glusterfs副本与纠删码实现分析.md) · [`glusterfs代码层次架构.md`](./glusterfs代码层次架构.md) · [`glusterfs架构概览.md`](./glusterfs架构概览.md)
 
 ---
 

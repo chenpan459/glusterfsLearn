@@ -221,13 +221,13 @@ struct _call_stack {
 
 **功能**：**副本卷**上维护多副本一致性、读修复、写仲裁、**self-heal** 与各种 split-brain 策略。
 
-**实现原理**：对子卷广播或选择性 WIND；用 **changelog**、**pending xattr**、版本向量等判定最新与需修复对象；自愈可由后台 shd 或访问触发。
+**实现原理**：对子卷广播或选择性 WIND；用 **changelog**、**pending xattr**、版本向量等判定最新与需修复对象；自愈可由后台 shd 或访问触发。详见 [`glusterfs副本与纠删码实现分析.md`](./glusterfs副本与纠删码实现分析.md) §2。
 
 ### 3.6 `cluster/ec`（纠删码）
 
 **功能**：将数据条带化并做 **纠删码** 分片，容忍部分 brick 不可用。
 
-**实现原理**：数学编码与条带布局在 EC xlator 内完成；读写需协调多个子卷并处理 degraded 模式。
+**实现原理**：数学编码与条带布局在 EC xlator 内完成；读写需协调多个子卷并处理 degraded 模式。详见 [`glusterfs副本与纠删码实现分析.md`](./glusterfs副本与纠删码实现分析.md) §3。
 
 ### 3.7 `storage/posix`
 
@@ -363,6 +363,7 @@ struct _call_stack {
 ## 7. 相关文档
 
 - [`glusterfs模块流程图.md`](./glusterfs模块流程图.md) — **各模块 Mermaid 流程图**  
+- [`glusterfs副本与纠删码实现分析.md`](./glusterfs副本与纠删码实现分析.md) — **AFR 与 EC 源码级说明**  
 - [`glusterfs架构概览.md`](./glusterfs架构概览.md)  
 - [`glusterfs代码层次架构.md`](./glusterfs代码层次架构.md)  
 - [`glusterfs集群部署.md`](./glusterfs集群部署.md)  
